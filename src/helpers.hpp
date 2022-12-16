@@ -16,6 +16,16 @@ T getAs(const std::string &s) {
   return t;
 }
 
+// template <typename T>
+template <>
+std::pair<char, char> getAs(const std::string &s) {
+  std::stringstream ss{s};
+  std::pair<char, char> pair;
+  ss >> pair.first;
+  ss >> pair.second;
+  return pair;
+}
+
 namespace {
 auto readLinesFromFile(const std::string &file) -> std::vector<std::string> {
   std::vector<std::string> inputs;

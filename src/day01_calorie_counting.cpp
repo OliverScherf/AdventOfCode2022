@@ -32,8 +32,8 @@ int64_t part2(const std::vector<std::string> &inputs) {
   std::vector<int64_t> elves_most_calories(N_LARGEST);
   // Sort & copy until we found the N_LARGEST elves
   std::partial_sort_copy(elves.begin(), elves.end(), elves_most_calories.begin(), elves_most_calories.end(),
-                         std::greater());
-  return std::accumulate(elves_most_calories.begin(), elves_most_calories.end(), 0, std::plus());
+                         std::greater<>());
+  return std::accumulate(elves_most_calories.begin(), elves_most_calories.end(), 0, std::plus<>());
 }
 
 int main() {
