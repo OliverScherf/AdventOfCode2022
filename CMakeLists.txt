@@ -16,3 +16,6 @@ target_compile_definitions(day01_calorie_counting PRIVATE INPUT_FILE_PATH=\"${CM
 
 add_executable(day02_rock_paper_scissors src/day02_rock_paper_scissors.cpp)
 target_compile_definitions(day02_rock_paper_scissors PRIVATE INPUT_FILE_PATH=\"${CMAKE_SOURCE_DIR}/src/day02_input.txt\")
+
+add_executable(day03_rucksack src/day03_rucksack.cpp)
+target_compile_definitions(day03_rucksack PRIVATE INPUT_FILE_PATH=\"${CMAKE_SOURCE_DIR}/src/day03_input.txt\")
