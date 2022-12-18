@@ -19,3 +19,6 @@ target_compile_definitions(day02_rock_paper_scissors PRIVATE INPUT_FILE_PATH=\"$
 
 add_executable(day03_rucksack src/day03_rucksack.cpp)
 target_compile_definitions(day03_rucksack PRIVATE INPUT_FILE_PATH=\"${CMAKE_SOURCE_DIR}/src/day03_input.txt\")
+
+add_executable(day04_camp_cleaning src/day04_camp_cleaning.cpp)
+target_compile_definitions(day04_camp_cleaning PRIVATE INPUT_FILE_PATH=\"${CMAKE_SOURCE_DIR}/src/day04_input.txt\")
