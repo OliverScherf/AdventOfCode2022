@@ -22,3 +22,10 @@ target_compile_definitions(day03_rucksack PRIVATE INPUT_FILE_PATH=\"${CMAKE_SOUR
 
 add_executable(day04_camp_cleaning src/day04_camp_cleaning.cpp)
 target_compile_definitions(day04_camp_cleaning PRIVATE INPUT_FILE_PATH=\"${CMAKE_SOURCE_DIR}/src/day04_input.txt\")
+
+add_executable(day05_crates src/day05_crates.cpp)
+target_compile_definitions(day05_crates
+  PRIVATE
+    INPUT_FILE_PATH_MOVES=\"${CMAKE_SOURCE_DIR}/src/day05_input_moves.txt\"
+    INPUT_FILE_PATH_CRATES=\"${CMAKE_SOURCE_DIR}/src/day05_input_stacks.txt\"
+)

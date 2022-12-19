@@ -39,9 +39,18 @@ auto readLinesFromFile(const std::string &file) -> std::vector<std::string> {
 } // namespace
 
 template <typename T>
-auto readFileToVector(const std::string &file) -> const std::vector<T> {
-  auto lines = readLinesFromFile(file);
+auto readFileToVector(const std::string &file) -> const std::vector<T>;
 
+template <>
+auto readFileToVector(const std::string &file) -> const std::vector<std::string> {
+  auto lines = readLinesFromFile(file);
+  return lines;
+}
+
+
+template <typename T>
+auto readFileToVector(const std::string &file) -> const std::vector<T> {
+  auto lines = readFileToVector<std::string>(file);
   std::vector<T> inputs;
   inputs.reserve(lines.size());
   for (auto &&line : lines) {
